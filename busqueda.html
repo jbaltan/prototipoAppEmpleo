@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fábrica de Talentos - Encuentra tu próximo trabajo</title>
+    <!-- Bootstrap 5.3 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados */
+        .skill-chip {
+            background-color: #e0f7fa;
+            border-radius: 20px;
+            padding: 5px 12px;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            transition: background-color 0.2s;
+        }
+        
+        .skill-chip:hover {
+            background-color: #b2ebf2;
+        }
+        
+        .job-card {
+            border-left: 4px solid #4fc3f7;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .suggestions-text {
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+        
+        .quick-filter-btn {
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <!-- Cabecera -->
+        <header class="text-center mb-5">
+            <h1 class="text-primary">Encuentra tu próximo trabajo</h1>
+            <p class="text-muted">Basado en tus habilidades, no solo en títulos</p>
+        </header>
+        
+        <!-- Barra de búsqueda -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Ej: Diseño gráfico, soporte técnico...">
+                    <button class="btn btn-primary" type="button">Buscar</button>
+                </div>
+                
+                <div class="mt-3">
+                    <span class="suggestions-text">Sugerencias:</span>
+                    <div class="d-flex flex-wrap mt-2">
+                        <span class="skill-chip">Marketing digital</span>
+                        <span class="skill-chip">Desarrollo web</span>
+                        <span class="skill-chip">Atención al cliente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Filtros rápidos -->
+        <div class="d-flex flex-wrap mb-5">
+            <button type="button" class="btn btn-outline-primary quick-filter-btn">Remoto</button>
+            <button type="button" class="btn btn-outline-primary quick-filter-btn">Flexible</button>
+            <button type="button" class="btn btn-outline-primary quick-filter-btn">Sin título universitario</button>
+            <button type="button" class="btn btn-outline-primary quick-filter-btn">Para padres/madres</button>
+        </div>
+        
+        <!-- Trabajos recomendados -->
+        <section class="mb-5">
+            <h2 class="mb-4">Recomendados para ti</h2>
+            
+            <div class="row g-4">
+                <!-- Trabajo 1 -->
+                <div class="col-md-6">
+                    <div class="card job-card h-100">
+                        <div class="card-body">
+                            <p class="text-muted mb-1">Remoto · Tiempo completo</p>
+                            <h3 class="h5">Diseñador gráfico</h3>
+                            <p class="card-text">Buscamos diseñador creativo para equipo de marketing digital. Experiencia en Adobe Creative Suite.</p>
+                            <div class="mt-2">
+                                <span class="badge bg-info me-1">Photoshop</span>
+                                <span class="badge bg-info me-1">Illustrator</span>
+                                <span class="badge bg-info">Diseño UI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Trabajo 2 -->
+                <div class="col-md-6">
+                    <div class="card job-card h-100">
+                        <div class="card-body">
+                            <p class="text-muted mb-1">Híbrido · Medio tiempo</p>
+                            <h3 class="h5">Soporte técnico</h3>
+                            <p class="card-text">Empresa tecnológica busca técnico para soporte remoto a clientes. No se requiere experiencia previa.</p>
+                            <div class="mt-2">
+                                <span class="badge bg-info me-1">Windows</span>
+                                <span class="badge bg-info me-1">Office</span>
+                                <span class="badge bg-info">Atención al cliente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Trabajo 3 -->
+                <div class="col-md-6">
+                    <div class="card job-card h-100">
+                        <div class="card-body">
+                            <p class="text-muted mb-1">Presencial · Tiempo completo</p>
+                            <h3 class="h5">Asistente administrativo</h3>
+                            <p class="card-text">Importante empresa busca asistente con habilidades organizativas y manejo de paquete Office.</p>
+                            <div class="mt-2">
+                                <span class="badge bg-info me-1">Excel</span>
+                                <span class="badge bg-info me-1">Organización</span>
+                                <span class="badge bg-info">Comunicación</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Trabajo 4 -->
+                <div class="col-md-6">
+                    <div class="card job-card h-100">
+                        <div class="card-body">
+                            <p class="text-muted mb-1">Remoto · Freelance</p>
+                            <h3 class="h5">Desarrollador web</h3>
+                            <p class="card-text">Proyecto de 3 meses para desarrollo de sitio e-commerce. Experiencia en React y Node.js.</p>
+                            <div class="mt-2">
+                                <span class="badge bg-info me-1">JavaScript</span>
+                                <span class="badge bg-info me-1">React</span>
+                                <span class="badge bg-info">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Enlace adicional -->
+        <div class="text-center">
+            <a href="filtros.html" class="btn btn-link">Más filtros</a>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
